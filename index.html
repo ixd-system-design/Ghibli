@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Films</title> 
-  
+    <link rel="icon" href="/vite.svg" type="image/svg+xml">
     <!-- Fonts via Monotype. Licenced for educational use. -->
     <link href="https://cdn.fonts.net/kit/fa9ee2d0-7e46-11ec-9ce3-0220834439f4/fa9ee2d0-7e46-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
      
@@ -17,7 +17,13 @@
         </main>
 
       <div id="credits">
-          This is a demo page to fetch and display data from an API. Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Systems Design in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Made with <a href="https://v3.vuejs.org/">Vue 3</a>. Data <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" target="_blank">fetched</a> via the <a href="https://ghibliapi.vercel.app">Studio Ghibli API</a>. RT logo via <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>. Fonts via <a href="https://enterprise.monotype.com/en/family/exljbris/antona">Monotype</a>. Thanks to Hayao Miyazaki and <a href="https://www.ghibli.jp/">Studio Ghibli</a> for all the magic. 
+        <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Systems Design in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Made with <a href="https://v3.vuejs.org/">Vue 3</a> and <a href="https://vite.dev">Vite</a>. Data <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" target="_blank">fetched</a> via the <a href="https://ghibliapi.vercel.app">Studio Ghibli API</a>. RT logo via <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>. Fonts via <a href="https://enterprise.monotype.com/en/family/exljbris/antona">Monotype</a>. Thanks to Hayao Miyazaki and <a href="https://www.ghibli.jp/">Studio Ghibli</a> for all the magic. </p>
+        <p>This demo uses <a href="https://vuejs.org/">VueJS</a> components to display films, fetched from the <a href="https://ghibliapi.vercel.app/">Studio Ghibli API</a>. It&#39;s a fairly simple use case, but it may offer a helpful intro to <code>VueJS</code>. You may like to explore how Vue Components are structured, and what problem they solve. Note, for example, how HTML, CSS, and JavaScript are combined in <code>src/components/Film.vue</code> by using <code>&lt;script&gt;</code>, <code>&lt;template&gt;</code>, and <code>&lt;style&gt;</code> tags. This is an example of a Vue <a href="https://vuejs.org/guide/scaling-up/sfc">Single File Component</a> (SFC), which groups together functionality based on design concerns rather than by file-type.  </p>
+<p>You might also also consider how Vue Components compare to using Vanilla JS with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> or <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">DOM manipulation</a>.</p> 
+<p>When working with  Vue <a href="https://vuejs.org/guide/scaling-up/sfc">Single File Components</a> we get a nice fluid developer experience, but one caviat is that the browser does not natively understand what a <code>.vue</code> file is. We must therefore compile the <code>.vue</code> into ordinary JavaScript so that it can be rended in the browser. Luckily the tools in this area are quite efficient.  <a href="https://vite.dev">Vite</a> elegantly solves the need to compile/bundle our code, and also offers a fast development server for testing. </p>
+
+
+         
       </div>
 
       <!-- It's important that we set type=module here, this makes 
