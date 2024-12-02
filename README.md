@@ -7,7 +7,7 @@ This demo uses [VueJS](https://vuejs.org/) components to display films, fetched 
 You might also also consider how Vue Components compare to using Vanilla JS with [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) or [DOM manipulation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 
 ## Vite
-When working with  Vue [Single File Components](https://vuejs.org/guide/scaling-up/sfc) we get a nice fluid developer experience, but one caviat is that the browser does not natively understand `.vue` file is. We must therefore compile the `.vue` into ordinary JavaScript so that it can be rended in the browser. You might think of this as a tradeoff: we are gaining a nice developer experience in exchange for having to use more tools. However it turns out that these tools are quite nice! Here we are using a tool called [Vite](https://vite.dev) that elegantly solves both the compiling/bundling bproblem as well as a development server for this project. 
+When working with  Vue [Single File Components](https://vuejs.org/guide/scaling-up/sfc) we get a nice fluid developer experience, but one caviat is that the browser does not natively understand what a `.vue` file is. We must therefore compile the `.vue` into ordinary JavaScript so that it can be rended in the browser. Luckily the tools in this area are quite efficient.  [Vite](https://vite.dev) elegantly solves the need to compile/bundle our code, and also offers a fast development server for testing. 
 
 ## Frontend Only
 This project assumes a front-end only context. This means that it does not come with any backend features (no API, and no Express endpoints).
