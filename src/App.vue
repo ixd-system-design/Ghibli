@@ -1,5 +1,5 @@
 <script setup>
-// import someVue functionality
+// import some Vue functionality
 import { onMounted, ref } from 'vue' 
 
 // import the Vue component for Films
@@ -36,9 +36,7 @@ onMounted( async () =>  {
   // the template will react to this automatically.
   const showFilm = (clickedFilm) => {
       selectedFilm.value = clickedFilm;
-  }
-  
-  
+  }  
 </script>
 
 <template> 
@@ -74,3 +72,55 @@ onMounted( async () =>  {
    
   
 </template> 
+
+<style scoped> 
+
+/* On a big screen we split the layout 30%/70%
+Note the units are "vw" (viewport width) */
+ nav { width: 30vw; }
+ article{ width: 70vw; }
+
+
+/* On a small screen the navigation moves to the top. */
+@media (max-width: 900px) {  
+   nav,  article { width: 100vw; }
+}
+
+/* the navigation is also a flex container but is has wrap enabled. 
+it also has some justificaiton applied to the images. */
+nav{ 
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+  align-content: flex-start; 
+} 
+
+/* Scale the menuItems in a responsive way */
+nav .menuItem{  
+  width: 33.333%;  
+  cursor: pointer;
+} 
+@media (max-width: 900px) { nav .menuItem{   width: 14.2857%; }  }
+@media (max-width: 600px) { nav .menuItem{   width: 16.667%; }  }
+
+
+#loader {  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30vw; 
+  height: 100vh;
+} 
+
+
+/* On the welcome/ landing area, the content is fully centered. */
+#welcome {  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+} 
+@media (max-width: 900px) { #welcome{   height: auto; }  }
+
+</style>
