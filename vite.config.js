@@ -1,23 +1,16 @@
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vite.dev/config/
+// Let's configure Vite to dynamically understand the repository context.
+// E.g. when we deploy to GitHub pages, the repository name will be part of the path 
+// We can use a flag in the GitHub Actions build environment to detect the repo name.
+// The repo name is always the bit after the “/” 
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
+
+// See also: https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    {
-      name: 'custom-startup-logs',
-      configureServer(server) {
-        server.httpServer?.on('listening', () => {  
-          console.clear();
-          console.log(`VITE server is ready.`)
-          console.log('\x1b[36m%s\x1b[0m',process.env.PUBLIC_URL);
-        });
-      },
-    }
-],
-  server: {
-    host:true,
-    port: 8000,
-  }
-})
+  plugins: [vue()],
+  // Locally you still get “/”, but on Actions you get “/repositoryName/”
+  base: process.env.GITHUB_ACTIONS === 'true' ? `/${repositoryName}/` : '/'
+}); 
