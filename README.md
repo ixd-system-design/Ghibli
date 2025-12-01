@@ -12,7 +12,7 @@ When working with  Vue [Single File Components](https://vuejs.org/guide/scaling-
 When working locally with this project, start by running `npm install` in the terminal to ensure that `Vite` and `Vue` are both ready to go. Then run `npm run dev` in order to start the Vite development server. Vite typically uses port 5173 if it's available, which means you can reach your site at [http://localhost:5173](http://localhost:5173). Any edits that you save will result in Vite automatically updating the changes in the browser. 
 
 ## Frontend Only
-This project assumes a front-end only context. This means that it does not come with any backend features (no API, and no Express endpoints).
+Note that this project assumes a front-end only context. This means that it does not come with any backend features (no API, and no Express endpoints).
   
 ## GitHub Action
 This template includes a GitHub Action workflow at `.github/workflows/main.yml`. The Action builds the Vite app to `/dest`. It then deploys the contents of `/dest` to production at `https://user.github.io/repository` 
